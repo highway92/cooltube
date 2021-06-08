@@ -1,0 +1,11 @@
+extends partials/layout
+include mixins/video
+
+
+block content 
+    form(metho="GET")
+        input(placeholder="Search by title", type="text",name="keyword")
+        input(type="submit", value="Search Now")
+    div
+        each video in videos 
+            +video(video)
