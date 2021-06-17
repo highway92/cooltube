@@ -3,7 +3,9 @@ extends partials/layout
 block content 
     if errorMessage
         span=errorMessage
-    form(method="POST")
+    form(method="POST", enctype="multipart/form-data")
+        label(for="video") Video File 
+        input(type="file", accept="video/*", required, id="video", name="video")
         input(placeholder="Title", required, type="text", name="title")
         input(placeholder="Description", required, type="text", name="description")
         input(placeholder="Hashtags, seperated by comma.", required, type="text", name="hashtags")

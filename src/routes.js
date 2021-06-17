@@ -1,6 +1,6 @@
 const HOME = "/";
 
-const USER = "/user";
+const USER = "/users";
 
 const VIDEO = "/videos";
 
