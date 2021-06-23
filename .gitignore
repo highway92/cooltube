@@ -5,3 +5,5 @@ babel.config.json
 .env
 /uploads
 webpack.config.js
+/assets
+nodemon.json
