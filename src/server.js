@@ -7,6 +7,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import routes from "./routes";
 import { localsMiddleware } from "./middlewares";
+import apiRouter from "./Router/apiRouter";
 
 const app = express();
 
@@ -30,5 +31,6 @@ app.use("/static", express.static("assets"));
 app.use(routes.home, rootRouter);
 app.use(routes.user, userRouter);
 app.use(routes.video, videoRouter);
+app.use("/api", apiRouter);
 
 export default app;
