@@ -18,10 +18,9 @@ export const protectMiddleware = (req, res, next) => {
 export const publicOnlyMiddleware = (req, res, next) => {
   if (!req.session.loggedIn) {
     return next();
-  } else {
-    req.flash("error", "Not authorized");
-    return res.redirect("/");
   }
+  req.flash("error", "Not authorized");
+  return res.redirect("/");
 };
 
 export const avatarUpload = multer({
