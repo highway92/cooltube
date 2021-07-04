@@ -18,14 +18,14 @@ videoRouter
   .all(protectMiddleware)
   .get(getEdit)
   .post(postEdit);
-videoRouter
-  .route("/:id([0-9a-f]{24})/delete")
-  .all(protectMiddleware)
-  .get(deleteVideo);
+// videoRouter
+//   .route("/:id([0-9a-f]{24})/delete")
+//   .all(protectMiddleware)
+//   .get(deleteVideo);
 videoRouter
   .route("/upload")
   .all(protectMiddleware)
   .get(getUpload)
-  .post(videoUpload.single("video"), postUpload);
+  .post(videoUpload.fields([{ name: "video" }, { name: "thumb" }]), postUpload);
 
 export default videoRouter;
