@@ -1,9 +1,5 @@
 node_modules
-package-lock.json
-babel.config.json
 .env
 /uploads
-webpack.config.js
 /assets
-nodemon.json
 /build

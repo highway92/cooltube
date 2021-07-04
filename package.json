@@ -1,7 +1,11 @@
 {
   "name": "cooltube",
   "version": "1.0.0",
-  "description": "",
+  "description": "Now making another youtube clone!",
+  "engines": {
+    "node": "16.4.1",
+    "npm": "7.18.1"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
@@ -33,7 +37,7 @@
   },
   "scripts": {
     "start": "node build/init.js",
-    "build":"npm run build:server && npm run build:assets",
+    "build": "npm run build:server && npm run build:assets",
     "build:server": "babel src -d build",
     "build:assets": "webpack --mode=production",
     "dev:server": "nodemon",
