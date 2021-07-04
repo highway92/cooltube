@@ -13,7 +13,7 @@ export const postJoin = async (req, res) => {
   }
   const exists = await User.exists({ $or: [{ userid }, { email }] });
   if (exists) {
-    return res.status(400).reder("join", {
+    return res.status(400).render("join", {
       pageTitle: "Join",
       errorMessage: "This id or email is already taken.",
     });
