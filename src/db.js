@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.Mongo_atlas, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
